@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1035px;
+  margin: 2rem auto;
+}
+
+.customRadio {
+  display: flex;
+  gap: 2rem;
+  padding: .8rem;
+}
+
+.customRadio input[type="radio"] {
+  display: none;
+}
+
+.customRadio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2.5rem;
+}
+
+.customRadio label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--blue-light);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.customRadio input[type="radio"]:checked + label::before {
+  background-color: var(--purple-light);
+  border-color: var(--purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customRadio input[type="radio"]:checked + label::after {
+  content: "✔";
+  position: absolute;
+  left: 6px;
+  top: 43%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.cardContent {
+  display: flex;
+  text-align: justify;
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.trashIcon {
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.trashIcon:hover {
+  color: var(--gray-100);
+}
