@@ -1,6 +1,7 @@
 import CardList from './CardList';
 import styles from './TaskList.module.css';
 
+
 export function TaskList() {
     return (
         <div>
@@ -15,8 +16,6 @@ export function TaskList() {
                     <span className={styles.taskCount}>0</span>
                 </div>
             </div>
-
-            <CardList ></CardList>
 
         </div>
     )
