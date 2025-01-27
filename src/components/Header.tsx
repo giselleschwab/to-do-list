@@ -29,6 +29,10 @@ export function Header() {
 
     }
 
+    function handleDeleteTask(taskToDelete: string) {
+        setTasks(tasks.filter(task => task !== taskToDelete));
+    }
+
     return (
         <>
             <div className={styles.header}>
@@ -51,7 +55,10 @@ export function Header() {
             <TaskList />
 
             {tasks.map((task, index) => (
-                <CardList key={index} task={task} />
+                <CardList
+                    key={index}
+                    task={task}
+                    onDelete={() => handleDeleteTask(task)} />
             ))}
 
         </>

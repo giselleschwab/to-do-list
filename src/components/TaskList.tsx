@@ -1,4 +1,3 @@
-import CardList from './CardList';
 import styles from './TaskList.module.css';
 
 
