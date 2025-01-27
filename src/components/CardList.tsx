@@ -10,13 +10,13 @@ function CardList({ task, onDelete }: CardListProps) {
     return (
 
         <div className={styles.card}>
-            <div className={styles.customRadio}>
+            <div className={styles.customCheckbox}>
                 <input
-                    type="radio"
+                    type="checkbox"
                     id={`task-${task}`}
-                    className={styles.cardRadio}
+                    className={styles.cardCheckbox}
                 />
-                <label htmlFor="radio" className={styles.cardContent}>
+                <label htmlFor={`task-${task}`} className={styles.cardContent}>
                     {task}
                 </label>
                 <Trash

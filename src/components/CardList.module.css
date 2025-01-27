@@ -1,5 +1,4 @@
 .card {
-  display: flex;
   align-items: center;
   background-color: var(--gray-500);
   color: var(--gray-100);
@@ -8,25 +7,26 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 1035px;
   margin: 2rem auto;
+  border: 2px solid var(--gray-400);
 }
 
-.customRadio {
+.customCheckbox {
   display: flex;
   gap: 2rem;
   padding: .8rem;
 }
 
-.customRadio input[type="radio"] {
+.customCheckbox input[type="checkbox"] {
   display: none;
 }
 
-.customRadio label {
+.customCheckbox label {
   position: relative;
   cursor: pointer;
   padding-left: 2.5rem;
 }
 
-.customRadio label::before {
+.customCheckbox label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -40,7 +40,7 @@
   transition: all 0.3s ease;
 }
 
-.customRadio input[type="radio"]:checked + label::before {
+.customCheckbox input[type="checkbox"]:checked + label::before {
   background-color: var(--purple-light);
   border-color: var(--purple-light);
   display: flex;
@@ -48,7 +48,7 @@
   justify-content: center;
 }
 
-.customRadio input[type="radio"]:checked + label::after {
+.customCheckbox input[type="checkbox"]:checked + label::after {
   content: "✔";
   position: absolute;
   left: 6px;
@@ -57,6 +57,12 @@
   color: #ffffff;
   font-size: 12px;
 }
+
+.customCheckbox input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: var(--gray-300); 
+}
+
 
 .cardContent {
   display: flex;
